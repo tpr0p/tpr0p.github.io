@@ -1,2 +1,11 @@
-# Ignore IDE and editor files.
+# IDE and editor files.
 **/*~
+
+# LaTex
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.pdf
+
+# Binaries
+*.DS_Store
