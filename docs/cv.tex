@@ -1,7 +1,5 @@
 \documentclass[letterpaper, 12pt]{article}
 
-% TODO: Itemize spacing
-
 % Imports
 \usepackage{anyfontsize}
 \usepackage{array}
@@ -30,49 +28,41 @@
 
 % Name and Contact Info
 \begin{center}
-{\huge
-  Thomas Propson \\[5pt]
-}
+{\huge Thomas Propson} \\[5pt]
 \href{mailto:tcpropson@gmail.com}{tcpropson@gmail.com} $\vert$
 +1 (952) 807-8718 $\vert$
 \href{https://thomaspropson.com}{thomaspropson.com}
 \end{center}
 
-\section{Education}
-\noindent
 \flushleft
-{
-  \begin{tabular}{@{} L{13cm} @{} R{3.51cm} @{}}
-    \textbf{B.S. University of Chicago} & Chicago, IL \\
-    Physics, Computer Science & 2017 - 2021 \\
-    GPA: 3.8875 / 4.0 & \\
-  \end{tabular}
-}
+\section{Education}
+\vspace{10pt}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{B.S. University of Chicago} & Chicago, IL \\
+  Physics, Computer Science & 2017 - 2021 \\
+  GPA: 3.8875 / 4.0 & \\
+\end{tabular}
 
 \section{Research Experience}
-\noindent
-\flushleft
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{University of Chicago Department of Computer Science} & Chicago, IL \\
-    Chong Group, Advisor: Frederic Chong & October 2018 - Present \\
-  \end{tabular}
-}
+\vspace{10pt}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{University of Chicago Department of Computer Science} & Chicago, IL \\
+  Chong Group, Advisor: Frederic Chong & October 2018 - Present \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
-  \setlength\itemsep{0pt}
-  \item stuff here
+  \item Developing an efficient compilation method for the Variational-Quantum-Eigensolver (VQE) algorithm in order to feasibly run this algorithm on near-term quantum computers
+  \item Wrote a program to generate arbitrary unitary coupled cluster double ansatzes for VQE and compile them using a quantum optimal control package developed by the Schuster Physics Lab at the University of Chicago 
 \end{itemize}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{Argonne National Laboratory} & Lemont, IL \\
-    Laboratory of Applied Mathematics, Numerical Software, and & June - August 2018 \\
-    Statistics, Advisors: Stefan Wild, Prasanna Balaprakash & \\
-  \end{tabular}
-}
+
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Argonne National Laboratory} & Lemont, IL \\
+  Laboratory of Applied Mathematics, Numerical Software, and & June - August 2018 \\
+  Statistics, Advisors: Stefan Wild, Prasanna Balaprakash & \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
-  \item Benchmarked hyperparameter optimization algorithms on deep neural networks
+  \item Collaborated with a student and two lead scientists to benchmark hyperparameter optimization algorithms on deep neural networks to discover characteristics of high performing algorithms 
   \item Developed an API in Python to evaluate hyperparameter optimization algorithms that exposes a novel search space definition system 
   \item Wrote neural network benchmarks for multiple neural architecture types, using Keras on top of Tensorflow, that expose tens of hyperparameters 
   \item Deployed experiments on high-performance computing infrastructure 
@@ -80,65 +70,68 @@
 
 \section{Awards \& Honors}
 \vspace{10pt}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{Liew Family College Research Grant} & 2018 \\
-    \textbf{University of Chicago Dean's List} & 2018 \\
-  \end{tabular}
-}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Liew Family College Research Fellowship} & 2018 \\
+\end{tabular}
+\vspace{-20pt}
+\begin{itemize}
+  \item \$1000 to pursue current research at the University of Chicago Department of Computer Science
+\end{itemize}
+
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Jeff Metcalf Research Fellowship} & 2018 \\
+\end{tabular}
+\vspace{-20pt}
+\begin{itemize}
+  \item \$4000 to pursue research at Argonne National Laboratory
+\end{itemize}
+
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{University of Chicago Dean's List} & 2018 \\
+\end{tabular}
 
 \section{Presentations}
 \vspace{10pt}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{Benchmarking Hyperparameter Optimization Algorithms on Deep Neural Networks} & \\
-  \end{tabular}
-}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Benchmarking Hyperparameter Optimization Algorithms on Deep Neural Networks} & \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
   \item University of Chicago - Undergraduate Research Symposium - Chicago, IL, 2018
   \item Argonne National Laboratory - Summer Argonne Student Symposium - Lemont, IL, 2018
 \end{itemize}
 
-
 \section{Work Experience}
 \vspace{10pt}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{PanorArt Inc.} & Chicago, IL \\
-    Full-Stack Web Developer & January - June 2018 \\
-  \end{tabular}
-}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{PanorArt Inc.} & Chicago, IL \\
+  Full-Stack Web Developer & January - June 2018 \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
-  \item Built front-end web components using the Angular platform to enrich user experience
-  \item Implemented Node.js, to communicate with web servers, relational and non-relational databases, feed information to front end components, and support mission-critical operations
+  \item Built front-end web components using Angular.js to provide users with a platform to buy and sell art that achieves greater price transparency than competing retailers
+  \item Implemented Node.js to handle server-client communication via HTTP as well as to manage relational and non-relational databases in order to ensure user data security and support mission-critical operations
 \end{itemize}
 
 \section{Service}
 \vspace{10pt}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{Uncommon Hacks} & Chicago, IL \\
-    Technology Division & October 2018 - Present \\
-  \end{tabular}
-}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Uncommon Hacks} & Chicago, IL \\
+  Technology Division & October 2018 - Present \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
-  \item Prepare and host an MLH endorsed hackathon for 300+ students
+  \item Prepare and host an MLH endorsed hackathon to provide a platform for 300+ students to develop technical skills and collaborate with peers to create innovative projects
   \item Constructed front-end views for an information page and registration website used by 1000+ users
 \end{itemize}
 
-\vspace{10pt}
-{
-  \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-    \textbf{Thompson House Council} & Chicago, IL \\
-    Treasurer & October 2018 - Present \\
-  \end{tabular}
-}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{University of Chicago Resident Life} & Chicago, IL \\
+  Thompson House Council, Treasurer & October 2018 - Present \\
+\end{tabular}
 \vspace{-10pt}
 \begin{itemize}
-  \item Manage funds and organize events for a residential community of 100+ students 
+  \item Manage finances and logistics for recreational events for a residential community of 100+ students to promote social connections and health
 \end{itemize}
 
 \end{document}
