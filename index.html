@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta content="Thomas Propson is interested in physics and optimization. "
+    <meta content="Thomas is interested in physics and optimization. "
           "Join him in applying these tools to build value for the world!" name="description">
     <title> Thomas Propson </title>
     <link rel="stylesheet" href="styles.css">
@@ -9,10 +9,14 @@
   </head>
   <body>
     <div id="container">
-    <!-- NAME -->
+      <!-- NAME -->
       <div id="name-header">
         Thomas Propson
       </div>
+
+      <!-- PROFILE -->
+      <img id="profile" src="assets/profile.png" alt="Me holding a squash.">
+      </img>
 
       <!-- BIO -->
       <div id="intro">
@@ -29,10 +33,6 @@
        in Minneapolis. Outside of work, I enjoy breakfast burritos, running, and jiu-jitsu.
        <br/><br/>
       </div>
-
-      <!-- PROFILE -->
-      <img id="profile" src="assets/profile.png" alt="Me holding a squash.">
-      </img>
 
       <!-- LINKS -->
       <div id="links">
@@ -63,7 +63,7 @@
         </div>
         <div id="link4" class="link">
           <a href="static/propson_cv.pdf" target="_blank">
-            <img src="assets/cv.png" width="40px">
+            <img id="cv-svg" src="assets/cv.png">
             </img>
           </a>
         </div>
@@ -74,6 +74,109 @@
           </a>
         </div>
       </div>
+      
+      <!-- PUBLICATIONS -->
+      <div id="publications-header" class="section-header">
+        Publications
+      </div>
+      
+      <ul id="publications">
+        <li>
+          <a href="https://arxiv.org/abs/1909.07522" target="_blank">
+            Partial Compilation of Variational Algorithms
+            for Noisy Intermediate-Scale Quantum Machines.
+          </a> Pranav Gokhale, Yongshan Ding, <u>Thomas Propson</u>,
+          Christopher Winkler, Nelson Leung, Yunong Shi,
+          David I. Schuster, Henry Hoffmann, Frederic T. Chong.
+          <br/>
+          In proceedings of the 52nd Annual IEEE/ACM International Symposium on
+          Microarchitecture (MICRO). October 2019.
+          <ul>
+            <li>
+              Press: <a href="https://phys.org/news/2019-10-quantum-faster.html"
+                        target="_blank">Phys.org</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- PRESENTATIONS -->
+      <div id="presentations-header" class="section-header">
+        Presentations
+      </div>
+      
+      <ul id="presentations">
+        <li>
+          Commercial Outlook for Quantum Computing
+          <ul>
+            <li>
+              University of Chicago - Booth School of Business - Chicago, IL 2019
+            </li>
+          </ul>
+        </li>
+        <br/>
+        <li>
+          Benchmarking Hyperparameter Optimization Algorithms
+          on Deep Neural Networks
+          <ul>
+            <li>
+              University of Chicago - Undergraduate Research Symposium - Chicago, IL 2018
+            </li>
+            <li>
+              Argonne National Laboratory - Summer Argonne Student Symposium - Lemont, IL 2018
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Projects -->
+      <div id="projects-header" class="section-header">
+        Projects
+      </div>
+
+      <img id="qoc-logo" src="assets/qoc.svg" alt="QOC logo"></img>
+      <img id="uh-logo" src="assets/uh.svg" alt="Uncommon Hacks logo"></img>
+      <ul id="projects">
+        <li>
+          <a href="https://github.com/SchusterLab/qoc" target="_blank">
+            QOC
+          </a>
+        </li>
+        Unlike classical computers that are controlled digitally,
+        quantum computers are controlled
+        using analog control pulses (typically electromagnetic waves).
+        <u>Q</u>uantum <u>O</u>ptimal <u>C</u>ontrol
+        finds control pulses that achieve specific transformations on a quantum
+        system while satisfying experimental constraints. The main contribution of this tool
+        is that it can model the decoherence of the quantum system, enabling 
+        experimentalists to find control pulses that work in spite of the system's decay.
+        <br/><br/>
+      
+        <li>
+          <a href="https://uncommonhacks.com" target="_blank">
+            Uncommon Hacks
+          </a>
+        </li>
+        Uncommon Hacks is a student organization at UChicago that hosts hack-a-thons
+        to foster a tech community on campus. I serve as the tech lead for UH. I oversee
+        a team of developers and graphic designers to build everything UH puts on the web.
+        Our hackathons are typically attended by 300 students and our websites reach
+        thousands of users.
+        <ul>
+          <li>
+            <a href="https://hacks2020.uncommonhacks.com" target="_blank"> Hacks 2020</a>
+          </li>
+          <li>
+            <a href="https://makes2019.uncommonhacks.com" target="_blank"> Makes 2019</a>
+          </li>
+          <li>
+            <a href="https://hacks2019.uncommonhacks.com" target="_blank"> Hacks 2019</a>
+          </li>
+          <li>
+            <a href="https://makes2018.uncommonhacks.com" target="_blank"> Makes 2018</a>
+          </li>
+        </ul>
+      </ul>
     </div>
   </body>
 </html>

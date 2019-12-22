@@ -2,8 +2,23 @@
 
 :root {
   --container-width-desktop: 730px;
-  --link-width-desktop: 40px;
+  --container-width-mobile: 90vw;
   --link-offset-desktop: calc(var(--link-width-desktop) * 1.8);
+  --link-offset-mobile: calc(var(--link-width-mobile) * 1.5);
+  --link-width-desktop: 40px;
+  --link-width-mobile: 40px;
+  --links-height-mobile: var(--link-width-mobile);
+  --links-width-mobile: 340px;
+}
+
+a {
+  color: rgba(0, 80, 255, 1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 80, 255, 1);
+  text-decoration: underline;
 }
 
 body {
@@ -12,41 +27,133 @@ body {
   padding: 0;
 }
 
-/*** CLASSES ***/
-
-.section-header {
-  font-size: 24px;
-  position: absolute;
+li {
+  font-size: 16px;
+  position: relative;
 }
+
+/*** CLASSES ***/
 
 .link {
   position: absolute;
+  width: var(--link-width-mobile);
 }
 
+.section-header {
+  font-size: 30px;
+  position: relative;
+}
 
 /*** ELEMENTS ***/
 
 #container {
   display: block;
+  left: 5vw;
   position: absolute;
+  top: 2vw;
+  width: 90vw;
+}
+
+#cv-svg {
+  width: 35px;
 }
 
 #name-header {
   font-size: 36px;   
-  position: absolute;          
+  left: 15vw;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 60vw;          
 }
 
 #intro {
+  left: 10vw;      
   font-size: 18px;
-  position: absolute;
+  position: relative;
+  top: 5vw;
+  width: 70vw;
 }
 
 #links {
-  position: absolute;
+  display: inline-block;       
+  height: var(--links-height-mobile);
+  left: calc((var(--container-width-mobile) - var(--links-width-mobile)) / 2);
+  position: relative;
+  top: 5vw;
+  width: var(--links-width-mobile);
+}
+
+#link0 {
+  left: 0;
+}
+
+#link1 {
+  left: var(--link-offset-mobile);
+}
+
+#link2 {
+  left: calc(2 * var(--link-offset-mobile));
+}
+
+#link3 {
+  left: calc(3 * var(--link-offset-mobile));
+}
+
+#link4 {
+  left: calc(4 * var(--link-offset-mobile));
+}
+
+#link5 {
+  left: calc(5 * var(--link-offset-mobile));
+}
+
+#presentations-header {
+  left: 0;
+  top: 12vw;
+}
+
+#presentations {
+  left: 0;
+  position: relative;
+  top: 12vw;
 }
 
 #profile {
-  position: absolute;
+  left: 35vw;
+  position: relative;
+  top: 2vw;         
+  width: 20vw;
+}
+
+#projects-header {
+  left: 0;
+  top: 12vw;
+}
+
+#projects {
+  left: 0;
+  position: relative;
+  top: 12vw;
+}
+
+#publications-header {
+  left: 0;
+  top: 12vw;
+}
+
+#publications {
+  left: 0;
+  position: relative;
+  top: 12vw;              
+}
+
+#qoc-logo {
+  display: none;
+}
+
+#uh-logo {
+  display: none;
 }
 
 
@@ -65,14 +172,16 @@ body {
   
   #intro {
     left: 0;
+    position: absolute;
     top: 70px;
     width: 480px;
   }
 
   #links {
     left: 0;
-    width: var(--container-width-desktop);
+    position: absolute;
     top: 320px;
+    width: var(--container-width-desktop);
   }
 
   #link0 {
@@ -99,10 +208,71 @@ body {
     left: calc(5 * var(--link-offset-desktop));
   }
 
+  #name-header {
+    left: 0;
+    position: absolute;
+    text-align: unset;
+    width: unset;
+  }
+
+  #presentations-header {
+    left: unset;
+    position: absolute;
+    top: 580px;
+  }
+
+  #presentations {
+    left: unset;
+    position: absolute;
+    top: 610px;
+  }
+
   #profile {
+    left: unset;
+    position: absolute;
     right: 0;
     top: 70px;
     width: 200px;
   }
 
+  #projects-header {
+    left: unset;
+    position: absolute;
+    top: 770px;
+  }
+
+  #projects {
+    left: unset;
+    position: absolute;
+    top: 800px;
+    width: 525px;
+  }
+
+  #publications-header {
+    left: unset;
+    position: absolute;
+    top: 400px;
+  }
+
+  #publications {
+    left: unset;
+    position: absolute;
+    top: 430px;
+  }
+  
+  #qoc-logo {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 835px;
+    width: 100px;
+  }
+
+  #uh-logo {
+    display: block;     
+    position: absolute;
+    right: 16px;
+    top: 1010px;
+    width: 80px;
+  }
 }
