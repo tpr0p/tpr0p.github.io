@@ -67,7 +67,7 @@ ul {
   left: 0;
   position: absolute;
   top: 0;
-  width: var(--container-width-mobile);
+  width: 0;
 }
 
 #cv-svg {
