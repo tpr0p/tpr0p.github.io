@@ -35,7 +35,7 @@ li {
 }
 
 ul {
-  padding-inline-start: 40px;
+  padding-inline-start: 8vw;
 }
 
 /*** CLASSES ***/
@@ -51,7 +51,7 @@ ul {
 
 .section {
   left: 0;
-  width: 85vw;
+  width: 84vw;
 }
 
 .section-header {
@@ -175,6 +175,10 @@ ul {
     font-size: var(--font-size-body-mobile);
   }
 
+  ul {
+    padding-inline-start: 40px;
+  }
+
   .link {
     top: 0;
     width: var(--link-width-desktop);
@@ -253,13 +257,13 @@ ul {
   #presentations-header {
     left: unset;
     position: absolute;
-    top: 590px;
+    top: 570px;
   }
 
   #presentations {
     left: unset;
     position: absolute;
-    top: 620px;
+    top: 600px;
   }
 
   #profile {
@@ -273,13 +277,13 @@ ul {
   #projects-header {
     left: unset;
     position: absolute;
-    top: 860px;
+    top: 850px;
   }
 
   #projects {
     left: unset;
     position: absolute;
-    top: 890px;
+    top: 880px;
     width: 525px;
   }
 
