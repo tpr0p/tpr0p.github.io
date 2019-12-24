@@ -2,13 +2,15 @@
 
 :root {
   --container-width-desktop: 730px;
-  --container-width-mobile: 90vw;
+  --container-width-mobile: 100vw;
+  --font-size-body-mobile: 20px;
+  --link-count: 6;
   --link-offset-desktop: calc(var(--link-width-desktop) * 1.8);
   --link-offset-mobile: calc(var(--link-width-mobile) * 1.5);
   --link-width-desktop: 40px;
-  --link-width-mobile: 40px;
+  --link-width-mobile: 8vw;
   --links-height-mobile: var(--link-width-mobile);
-  --links-width-mobile: 340px;
+  --links-width-mobile: calc((var(--link-count) - 1) * var(--link-offset-mobile) + var(--link-width-mobile));
 }
 
 a {
@@ -28,8 +30,12 @@ body {
 }
 
 li {
-  font-size: 16px;
+  font-size: 5vw;
   position: relative;
+}
+
+ul {
+  padding-inline-start: 40px;
 }
 
 /*** CLASSES ***/
@@ -39,8 +45,18 @@ li {
   width: var(--link-width-mobile);
 }
 
+.project-description {
+  font-size: 5vw;
+}
+
+.section {
+  left: 0;
+  width: 85vw;
+}
+
 .section-header {
-  font-size: 30px;
+  font-size: 8vw; 
+  left: 2vw;
   position: relative;
 }
 
@@ -48,31 +64,31 @@ li {
 
 #container {
   display: block;
-  left: 5vw;
+  left: 0;
   position: absolute;
-  top: 2vw;
-  width: 90vw;
+  top: 0;
+  width: var(--container-width-mobile);
 }
 
 #cv-svg {
-  width: 35px;
+  width: 7vw;
 }
 
 #name-header {
-  font-size: 36px;   
-  left: 15vw;
+  font-size: 8vw;
+  left: 0;
   position: relative;
   text-align: center;
-  top: 0;
-  width: 60vw;          
+  top: 2vw;
+  width: 100vw;
 }
 
 #intro {
-  left: 10vw;      
-  font-size: 18px;
+  left: 2vw;
+  font-size: 5vw;
   position: relative;
-  top: 5vw;
-  width: 70vw;
+  top: 7vw;
+  width: 96vw;
 }
 
 #links {
@@ -109,43 +125,37 @@ li {
 }
 
 #presentations-header {
-  left: 0;
   top: 12vw;
 }
 
 #presentations {
-  left: 0;
   position: relative;
   top: 12vw;
 }
 
 #profile {
-  left: 35vw;
+  left: 37.5vw;
   position: relative;
-  top: 2vw;         
-  width: 20vw;
+  top: 4vw;         
+  width: 25vw;
 }
 
 #projects-header {
-  left: 0;
   top: 12vw;
 }
 
 #projects {
-  left: 0;
   position: relative;
   top: 12vw;
 }
 
 #publications-header {
-  left: 0;
   top: 12vw;
 }
 
 #publications {
-  left: 0;
   position: relative;
-  top: 12vw;              
+  top: 12vw;
 }
 
 #qoc-logo {
@@ -157,11 +167,33 @@ li {
 }
 
 
+/*** MOBILE ***/
+
 @media (min-device-width: 800px) and (min-width: 800px) {
+
+  li {
+    font-size: var(--font-size-body-mobile);
+  }
 
   .link {
     top: 0;
     width: var(--link-width-desktop);
+  }
+
+  .project-description {  
+    font-size: var(--font-size-body-mobile);
+  }
+
+  .section-header {
+    font-size: 30px;
+  }
+
+  .section {
+    width: auto;
+  }
+
+  #cv-svg {
+    width: 35px;
   }
 
   #container {
@@ -171,6 +203,7 @@ li {
   }
   
   #intro {
+    font-size: var(--font-size-body-mobile);
     left: 0;
     position: absolute;
     top: 70px;
@@ -180,7 +213,7 @@ li {
   #links {
     left: 0;
     position: absolute;
-    top: 320px;
+    top: 265px;
     width: var(--container-width-desktop);
   }
 
@@ -209,22 +242,24 @@ li {
   }
 
   #name-header {
+    font-size: 36px;
     left: 0;
     position: absolute;
     text-align: unset;
+    top: 0;
     width: unset;
   }
 
   #presentations-header {
     left: unset;
     position: absolute;
-    top: 580px;
+    top: 590px;
   }
 
   #presentations {
     left: unset;
     position: absolute;
-    top: 610px;
+    top: 620px;
   }
 
   #profile {
@@ -238,33 +273,33 @@ li {
   #projects-header {
     left: unset;
     position: absolute;
-    top: 770px;
+    top: 860px;
   }
 
   #projects {
     left: unset;
     position: absolute;
-    top: 800px;
+    top: 890px;
     width: 525px;
   }
 
   #publications-header {
     left: unset;
     position: absolute;
-    top: 400px;
+    top: 355px;
   }
 
   #publications {
     left: unset;
     position: absolute;
-    top: 430px;
+    top: 385px;
   }
   
   #qoc-logo {
     display: block;
     position: absolute;
     right: 0;
-    top: 835px;
+    top: 925px;
     width: 100px;
   }
 
@@ -272,7 +307,7 @@ li {
     display: block;     
     position: absolute;
     right: 16px;
-    top: 1010px;
+    top: 1195px;
     width: 80px;
   }
 }
