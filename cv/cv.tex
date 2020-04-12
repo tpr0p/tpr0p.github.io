@@ -1,7 +1,6 @@
 \documentclass[letterpaper, 12pt]{article}
 
-% Import
-
+% Import packages.
 \usepackage{anyfontsize}
 \usepackage{array}
 \usepackage[english]{babel}
@@ -14,44 +13,52 @@
 \usepackage{titlesec} 
 \usepackage[usenames,dvipsnames]{xcolor}
 
-% Configure Imports
+% Configure imported packages.
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-% Customize Sections
+% Customize sections.
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
-% Aligned Table Columns
+% spacing around sections
+\titlespacing{\section}{0pt}{3pt}{3pt} 
+% Table column alignment options.
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}  
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+% itemize item spacing
+\let\olditemize=\itemize
+\let\endolditemize=\enditemize
+\renewenvironment{itemize}{\olditemize \itemsep-0.5em}
+                 {\endolditemize}
 
 \begin{document}
 
-% Name and Contact Info
+%% NAME
 \begin{center}
 {\huge Thomas Propson} \\[5pt]
 \href{mailto:tcpropson@uchicago.edu}{tcpropson@uchicago.edu} $\vert$
 \href{https://thomaspropson.com}{thomaspropson.com}
 \end{center}
 
+
 \flushleft
+
+%% EDUCATION
 \section{Education}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{B.S. University of Chicago} & Chicago, IL \\
-  Physics, Computer Science & 2017 - 2021 \\
+  \textbf{University of Chicago} & Chicago, IL \\
+  B.S. Physics, Computer Science & 2017-2021\\
   GPA: 3.88 / 4.0 & \\
 \end{tabular}
-\vspace{5pt}
+\vspace{2pt}
 
 
+%% RESEARCH EXPERIENCE
 \section{Research Experience}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{University of Chicago James Franck Institute} & Chicago, IL \\
   Schuster Lab, Advisor: David I. Schuster & June 2019 - Present \\
 \end{tabular}
-\vspace{-10pt}
+\vspace{-1.4em}
 \begin{itemize}
   \item Develop an open-source software package that performs quantum optimal control
         on open systems, and achieves experimental robustness
@@ -59,6 +66,7 @@
   \item Assess and implement numerical analysis techniques to achieve efficient and accurate quantum
         system simulation
 \end{itemize}
+\vspace{-0.5em}
 
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{University of Chicago Department of Computer Science} & Chicago, IL \\
@@ -66,129 +74,108 @@
 \begin{tabular}{@{} L{11cm} @{} R{5.51cm} @{}}
   Chong Lab, Advisor: Frederic Chong & October 2018 - June 2019 \\
 \end{tabular}
-\vspace{-15pt}
+\vspace{-2.0em}
 \begin{itemize}
   \item Developed a compilation method for variational quantum algorithms that achieves a 30x latency reduction
   \item Developed an operation scheduling algorithm for frequency-tunable qubits that mitigates cross-talk
   \item Investigated properties of near-term quantum hardware and algorithms to optimize quantum architecture for fidelity and latency
     %%\item Utilize IBM Qiskit software to generate quantum circuits and perform gate optimization
 \end{itemize}
+\vspace{-0.5em}
 
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{Argonne National Laboratory} & Lemont, IL \\
   Laboratory of Applied Mathematics, Numerical Software, and & June - August 2018 \\
   Statistics, Advisors: Stefan Wild, Prasanna Balaprakash & \\
 \end{tabular}
-\vspace{-10pt}
+\vspace{-1.4em}
 \begin{itemize}
   \item Developed a software package to evaluate hyperparameter optimization algorithms that exposes a novel search space definition system
   \item Deployed neural network experiments on high-performance computing infrastructure 
     %%\item Wrote neural network benchmarks for multiple neural architecture types, using Keras on top of Tensorflow, that expose tens of hyperparameters
     %%\item Collaborated with a student and two lead scientists to benchmark hyperparameter optimization algorithms on deep neural networks to discover characteristics of high performing algorithms
 \end{itemize}
+\vspace{-0.5em}
 
-\pagebreak
+
+%% PUBLICATIONS
 \section{Publications}
-\vspace{10pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{Partial Compilation of Variational Algorithms for Noisy Intermediate-Scale Quantum Machines} & October 2019 \\
 \end{tabular}
-  \textit{P. Gokhale, Y. Ding, T. Propson, C. Winkler, N. Leung, Y. Shi, D. I. Schuster, H. Hoffmann, F. T. Chong.}\\
-  In Proc. of the 52nd Annual IEEE/ACM Intl. Symposium on Microarchitecture (MICRO)\\
+\textit{P. Gokhale, Y. Ding, T. Propson, C. Winkler, N. Leung, Y. Shi, D. I. Schuster, H. Hoffmann, F. T. Chong.}\\
+In Proc. of the 52nd Annual IEEE/ACM Intl. Symposium on Microarchitecture (MICRO)\\
+\vspace{2pt}
 
-\vspace{10pt}
+
+%% PATENTS
 \section{Patents}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{System and Method for Partial Compilation of Variational Algorithms in Quantum Computers}
   & Pending \\
   \textit{P. Gokhale, Y. Ding, T. Propson}\\
 \end{tabular}
 
-\vspace{10pt}
+
+\pagebreak
+
+
+%% PRESENTATIONS
 \section{Presentations}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{Commercial Outlook for Quantum Computing} & \\
 \end{tabular}
-\vspace{-20pt}
+\vspace{-2.0em}
 \begin{itemize}
   \item University of Chicago - Booth School of Business - Chicago, IL 2019
 \end{itemize}
+\vspace{-0.5em}
 
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{Benchmarking Hyperparameter Optimization Algorithms on Deep Neural Networks} & \\
 \end{tabular}
-\vspace{-10pt}
+\vspace{-1.5em}
 \begin{itemize}
   \item University of Chicago - Undergraduate Research Symposium - Chicago, IL 2018\\
   \item Argonne National Laboratory - Summer Argonne Student Symposium - Lemont, IL 2018\\
 \end{itemize}
 
 
+%% AWARDS AND HONORS
 \section{Awards \& Honors}
-\vspace{5pt}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Barry Goldwater Scholarship} & 2020 \\
+\begin{tabular}{@{} L{14cm} @{} R{2.51cm} @{}}
+  \textbf{Goldwater Scholar}, Barry M. Goldwater Scholarship Foundation & 2020 \\
+  \textbf{Summer Action Grant}, University of Chicago & 2019 \\
+  \textbf{Liew Family College Research Fellowship}, University of Chicago & 2018 \\
+  \textbf{Jeff Metcalf Research Fellowship}, University of Chicago & 2018 \\
+  \textbf{University Scholarship}, University of Chicago & 2017-2021\\
+  \textbf{Dean's List}, University of Chicago & 2018, 2019 \\
 \end{tabular}
-\vspace{3pt}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{University of Chicago Summer Action Grant} & 2019 \\
-\end{tabular}
-\vspace{-20pt}
-\begin{itemize}
-  \item Received funding to pursue research at the University of Chicago James Franck Institute
-\end{itemize}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Liew Family College Research Fellowship} & 2018 \\
-\end{tabular}
-\vspace{-20pt}
-\begin{itemize}
-  \item Received funding to pursue research at the University of Chicago Department of Computer Science
-\end{itemize}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Jeff Metcalf Research Fellowship} & 2018 \\
-\end{tabular}
-\vspace{-20pt}
-\begin{itemize}
-  \item Received funding to pursue research at Argonne National Laboratory
-\end{itemize}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{University of Chicago Dean's List} & 2018, 2019 \\
-\end{tabular}
-\vspace{5pt}
-
-\pagebreak
+\vspace{0.2em}
 
 \end{document}
 
+%% WORK EXPERIENCE
 \section{Work Experience}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{PanorArt Inc.} & Chicago, IL \\
   Full-Stack Web Developer & January - June 2018 \\
 \end{tabular}
-\vspace{-10pt}
+\vspace{-1.5em}
 \begin{itemize}
   \item Built front-end web components using Angular.js to provide users with a platform to buy and sell art that achieves greater price transparency than competing platforms
   \item Improved online presence by implementing search engine optimization techniques
   \item Implemented Node.js to handle server-client communication via HTTP as well as to manage relational and non-relational databases in order to ensure user data security and support mission-critical operations
 \end{itemize}
-\vspace{5pt}
 
 
+%% SERVICE
 \section{Service}
-\vspace{5pt}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
   \textbf{Uncommon Hacks} & Chicago, IL \\
   Technology Team Lead & October 2018 - Present \\
 \end{tabular}
-\vspace{-10pt}
+\vspace{-1.5em}
 \begin{itemize}
   \item Lead a 10-person team of designers and software developers to build websites that reach 1000+ users
   \item Prepare and host an MLH endorsed hackathon to provide a platform for 300+ students to develop technical skills and collaborate with peers to create innovative projects
@@ -198,7 +185,6 @@
   \textbf{University of Chicago Resident Life} & Chicago, IL \\
   Thompson House Council, Treasurer & October 2018 - June 2019 \\
 \end{tabular}
-\vspace{-10pt}
 \begin{itemize}
   \item Manage finances and logistics for recreational events for a residential community of 100+ students to promote social connections and health
 \end{itemize}
