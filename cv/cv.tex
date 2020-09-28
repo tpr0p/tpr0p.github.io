@@ -19,22 +19,21 @@
 % Customize sections.
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
 % spacing around sections
-\titlespacing{\section}{0pt}{3pt}{3pt} 
+\titlespacing{\section}{0pt}{1em}{3pt} 
 % Table column alignment options.
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}  
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
-% itemize item spacing
-\let\olditemize=\itemize
-\let\endolditemize=\enditemize
-\renewenvironment{itemize}{\olditemize \itemsep-0.5em}
-                 {\endolditemize}
+% Remove spacing before itemize
+\setlist{nolistsep}
+% itemize bullet size
+\renewcommand\labelitemi{\scriptsize$\bullet$}
 
 \begin{document}
 
 %% NAME
 \begin{center}
-{\huge Thomas Propson} \\[5pt]
+{\large Thomas Propson} \\[5pt]
 \href{mailto:tcpropson@uchicago.edu}{tcpropson@uchicago.edu} $\vert$
 \href{https://thomaspropson.com}{thomaspropson.com}
 \end{center}
@@ -45,113 +44,118 @@
 %% EDUCATION
 \section{Education}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{University of Chicago} & Chicago, IL \\
-  B.S. Physics, Computer Science & 2017-2021\\
-  GPA: 3.88 / 4.0 & \\
+  \textbf{University of Chicago} & 2017-2021\\
+  B.S. Physics, Computer Science\\
+  GPA: 3.89 / 4.0 &\\
 \end{tabular}
-\vspace{2pt}
-
 
 %% RESEARCH EXPERIENCE
 \section{Research Experience}
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{University of Chicago James Franck Institute} & Chicago, IL \\
-  Schuster Lab, Advisor: David I. Schuster & June 2019 - Present \\
+  \textbf{Experimental Control of Superconducting Qubits} & 2019-Present\\
 \end{tabular}
-\vspace{-1.4em}
+University of Chicago, Department of Physics, Advisor: David I. Schuster\\
 \begin{itemize}
+  \item Perform control, spectroscopy, and readout on superconducting qubits
   \item Develop an open-source software package that performs quantum optimal control
         on open systems, and achieves experimental robustness
-  \item Perform control, spectroscopy, and readout on superconducting qubits
-  \item Assess and implement numerical analysis techniques to achieve efficient and accurate quantum
+  \item Assess and implement numerical techniques to achieve efficient and accurate quantum
         system simulation
 \end{itemize}
-\vspace{-0.5em}
 
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{University of Chicago Department of Computer Science} & Chicago, IL \\
+  \textbf{Quantum Hardware and Algorithm Optimization} & 2018-2019\\
 \end{tabular}
-\begin{tabular}{@{} L{11cm} @{} R{5.51cm} @{}}
-  Chong Lab, Advisor: Frederic Chong & October 2018 - June 2019 \\
-\end{tabular}
-\vspace{-2.0em}
+University of Chicago, Department of Computer Science, Advisor: Frederic T. Chong
 \begin{itemize}
-  \item Developed a compilation method for variational quantum algorithms that achieves a 30x latency reduction
+  \item Developed a method for compiling variational quantum algorithms that achieves a 30x latency reduction
   \item Developed an operation scheduling algorithm for frequency-tunable qubits that mitigates cross-talk
-  \item Investigated properties of near-term quantum hardware and algorithms to optimize quantum architecture for fidelity and latency
-    %%\item Utilize IBM Qiskit software to generate quantum circuits and perform gate optimization
+  \item Investigated properties of near-term quantum hardware and algorithms
+    to optimize quantum architecture for fidelity and latency
 \end{itemize}
-\vspace{-0.5em}
 
 \begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Argonne National Laboratory} & Lemont, IL \\
-  Laboratory of Applied Mathematics, Numerical Software, and & June - August 2018 \\
-  Statistics, Advisors: Stefan Wild, Prasanna Balaprakash & \\
+  \textbf{Hyperparameter Optimization} & 2018\\
 \end{tabular}
-\vspace{-1.4em}
+Argonne National Laboratory, Division of Math and Computer Science\\
+Advisors: Stefan Wild, Prasanna Balaprakash
 \begin{itemize}
-  \item Developed a software package to evaluate hyperparameter optimization algorithms that exposes a novel search space definition system
+\item Developed a software package to evaluate hyperparameter optimization algorithms
+  that exposes a novel search space definition system
   \item Deployed neural network experiments on high-performance computing infrastructure 
-    %%\item Wrote neural network benchmarks for multiple neural architecture types, using Keras on top of Tensorflow, that expose tens of hyperparameters
-    %%\item Collaborated with a student and two lead scientists to benchmark hyperparameter optimization algorithms on deep neural networks to discover characteristics of high performing algorithms
 \end{itemize}
-\vspace{-0.5em}
-
 
 %% PUBLICATIONS
 \section{Publications}
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Partial Compilation of Variational Algorithms for Noisy Intermediate-Scale Quantum Machines} & October 2019 \\
-\end{tabular}
-\textit{P. Gokhale, Y. Ding, T. Propson, C. Winkler, N. Leung, Y. Shi, D. I. Schuster, H. Hoffmann, F. T. Chong.}\\
-In Proc. of the 52nd Annual IEEE/ACM Intl. Symposium on Microarchitecture (MICRO)\\
-\vspace{2pt}
-
-
-%% PATENTS
-\section{Patents}
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{System and Method for Partial Compilation of Variational Algorithms in Quantum Computers}
-  & Pending \\
-  \textit{P. Gokhale, Y. Ding, T. Propson}\\
-\end{tabular}
-
+\begin{enumerate}
+\item \textbf{T. Propson}, B. Jackson, Z. Manchester, D. I. Schuster, "Robust Control
+  of a Fluxonium Qubit." In preparation (2020).
+\item Y. Ding, P. Gokhale, S. F. Lin, R. Rines, \textbf{T. Propson}, F. T. Chong,
+  "Systematic Crosstalk Mitigation for Superconducting Qubits via Frequency-Aware Compilation."
+  Proceedings of the 53rd Annual
+  IEEE/ACM International Symposium on Microarchitecture (2020).
+       [\href{https://arxiv.org/abs/2008.09503}{arixv:2008.09503}]
+\item P. Gokhale, Y. Ding, \textbf{T. Propson}, C. Winkler, N. Leung, Y. Shi,
+  D. I. Schuster, H. Hoffmann, F. T. Chong,
+  "Partial Compilation of Variational Algorithms for Noisy Intermediate-Scale Quantum Machines."
+  \href{https://doi.org/10.1145/3352460.3358313}{Proceedings of the 52nd Annual
+    IEEE/ACM International Symposium on Microarchitecture, 266-278} (2019).
+       [\href{https://arxiv.org/abs/1909.07522}{arixv:1909.07522}]
+\end{enumerate}
 
 \pagebreak
 
+%% PATENTS
+\section{Patents}
+\begin{enumerate}
+  \item P. Gokhale, Y. Ding, \textbf{T. Propson}, F. T. Chong, "System and Method
+    for Partial Compilation of Variational Algorithms in Quantum Computers." Pending.
+\end{enumerate}
 
-%% PRESENTATIONS
-\section{Presentations}
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Commercial Outlook for Quantum Computing} & \\
-\end{tabular}
-\vspace{-2.0em}
-\begin{itemize}
-  \item University of Chicago - Booth School of Business - Chicago, IL 2019
-\end{itemize}
-\vspace{-0.5em}
-
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Benchmarking Hyperparameter Optimization Algorithms on Deep Neural Networks} & \\
-\end{tabular}
-\vspace{-1.5em}
-\begin{itemize}
-  \item University of Chicago - Undergraduate Research Symposium - Chicago, IL 2018\\
-  \item Argonne National Laboratory - Summer Argonne Student Symposium - Lemont, IL 2018\\
-\end{itemize}
-
+%% TALKS
+\section{Talks}
+Commercial Outlook for Quantum Computing\\
+\qquad University of Chicago, Booth School of Business, 2019\\
+Benchmarking Hyperparameter Optimization Algorithms on Deep Neural Networks\\
+\qquad University of Chicago, Undergraduate Research Symposium, 2018\\
+\qquad Argonne National Laboratory, Summer Student Symposium, 2018\\
 
 %% AWARDS AND HONORS
-\section{Awards \& Honors}
+\section{Honors and Awards}
 \begin{tabular}{@{} L{14cm} @{} R{2.51cm} @{}}
-  \textbf{Goldwater Scholar}, Barry M. Goldwater Scholarship Foundation & 2020 \\
-  \textbf{Summer Action Grant}, University of Chicago & 2019 \\
-  \textbf{Liew Family College Research Fellowship}, University of Chicago & 2018 \\
-  \textbf{Jeff Metcalf Research Fellowship}, University of Chicago & 2018 \\
-  \textbf{University Scholarship}, University of Chicago & 2017-2021\\
-  \textbf{Dean's List}, University of Chicago & 2018, 2019 \\
+  Grainger Scholarship, Full-tuition senior year, UChicago Physics & 2020\\
+  Barry Goldwater Scholarship & 2020\\
+  Enrico Fermi Scholar, GPA in top 5\% from past 5 years, UChicago PSD & 2020\\
+  Liew Family College Research Fellowship, UChicago & 2018\\
+  Jeff Metcalf Research Fellowship, UChicago & 2018 \\
+  University Scholarship, UChicago & 2017-2021\\
 \end{tabular}
-\vspace{0.2em}
+
+%% SERVICE
+\section{Service}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{Uncommon Hacks} & 2018-Present\\
+\end{tabular}
+Technology Team Lead\\
+\begin{itemize}
+\item Organize an annual MLH endorsed hackathon to provide a platform for 300+
+  students to develop technical skills,
+  collaborate with peers to create innovative projects, and network with employers
+\item Lead a 10-person team of designers and software developers
+  to build websites that reach 1000+ users
+\end{itemize}
+
+%% WORK EXPERIENCE
+\section{Work Experience}
+\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
+  \textbf{PanorArt Inc.} & 2018 \\
+  Full-Stack Web Developer\\
+\end{tabular}
+\begin{itemize}
+  \item Built front-end web components using Angular.js to provide users with a platform to buy and sell art that achieves greater price transparency than competing platforms
+  \item Improved online presence by implementing search engine optimization techniques
+  \item Implemented Node.js to handle server-client communication via HTTP as well as to manage relational and non-relational databases in order to ensure user data security and support mission-critical operations
+\end{itemize}
 
 \end{document}
 
@@ -168,19 +172,7 @@ In Proc. of the 52nd Annual IEEE/ACM Intl. Symposium on Microarchitecture (MICRO
   \item Implemented Node.js to handle server-client communication via HTTP as well as to manage relational and non-relational databases in order to ensure user data security and support mission-critical operations
 \end{itemize}
 
-
 %% SERVICE
-\section{Service}
-\begin{tabular}{@{} L{12cm} @{} R{4.51cm} @{}}
-  \textbf{Uncommon Hacks} & Chicago, IL \\
-  Technology Team Lead & October 2018 - Present \\
-\end{tabular}
-\vspace{-1.5em}
-\begin{itemize}
-  \item Lead a 10-person team of designers and software developers to build websites that reach 1000+ users
-  \item Prepare and host an MLH endorsed hackathon to provide a platform for 300+ students to develop technical skills and collaborate with peers to create innovative projects
-\end{itemize}
-
 \begin{tabular}{@{} L{11cm} @{} R{5.51cm} @{}}
   \textbf{University of Chicago Resident Life} & Chicago, IL \\
   Thompson House Council, Treasurer & October 2018 - June 2019 \\
