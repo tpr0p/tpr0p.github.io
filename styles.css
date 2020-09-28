@@ -277,13 +277,13 @@ ul {
   #projects-header {
     left: unset;
     position: absolute;
-    top: 850px;
+    top: 665px;
   }
 
   #projects {
     left: unset;
     position: absolute;
-    top: 880px;
+    top: 700px;
     width: 525px;
   }
 
@@ -303,7 +303,7 @@ ul {
     display: block;
     position: absolute;
     right: 0;
-    top: 925px;
+    top: 775px;
     width: 100px;
   }
 
@@ -311,7 +311,7 @@ ul {
     display: block;     
     position: absolute;
     right: 16px;
-    top: 1195px;
+    top: 1020px;
     width: 80px;
   }
 }
