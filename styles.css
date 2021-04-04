@@ -204,6 +204,7 @@ ul {
     left: calc((100vw - var(--container-width-desktop)) / 2);
     top: 20px;
     width: var(--container-width-desktop);
+    height: 1150px;
   }
   
   #intro {
@@ -277,13 +278,13 @@ ul {
   #projects-header {
     left: unset;
     position: absolute;
-    top: 665px;
+    top: 770px;
   }
 
   #projects {
     left: unset;
     position: absolute;
-    top: 700px;
+    top: 800px;
     width: 525px;
   }
 
@@ -311,7 +312,7 @@ ul {
     display: block;     
     position: absolute;
     right: 16px;
-    top: 1020px;
+    top: 860px;
     width: 80px;
   }
 }
