@@ -36,6 +36,14 @@ li {
 
 ul {
   padding-inline-start: 8vw;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+p {
+  font-size: 5vw;
+  margin-block-start: 0;
+  margin-block-end: 0.35em;
 }
 
 /*** CLASSES ***/
@@ -156,6 +164,7 @@ ul {
 #publications {
   position: relative;
   top: 12vw;
+  left: 2vw;
 }
 
 #qoc-logo {
@@ -177,6 +186,10 @@ ul {
 
   ul {
     padding-inline-start: 40px;
+  }
+
+  p {
+    font-size: var(--font-size-body-mobile);
   }
 
   .link {
@@ -295,9 +308,9 @@ ul {
   }
 
   #publications {
-    left: unset;
+    left: 0;
     position: absolute;
-    top: 385px;
+    top: 400px;
   }
   
   #qoc-logo {
